@@ -7,7 +7,7 @@ BASE_URL = "http://localhost:8000"
 async def create_item():
     async with httpx.AsyncClient() as client:
         payload = {
-            "name": "Apple",
+            "name": "test",
             "description": "A juicy red apple",
             "price": 1.99,
             "quantity": 10
