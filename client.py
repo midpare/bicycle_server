@@ -23,7 +23,7 @@ async def create_item():
 async def update_item(item_id: str):
     async with httpx.AsyncClient() as client:
         payload = {
-            "name": "Orange",
+            "name": "test",
             "description": "A sweet orange",
             "price": 2.49,
             "quantity": 20

@@ -2,12 +2,13 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from pymongo import MongoClient
 from bson import ObjectId
+import os
 
 # FastAPI 앱 생성
 app = FastAPI()
 
 # MongoDB 클라이언트 연결
-client = MongoClient("mongodb+srv://midpare:moMinjun132!@cluster0.ty8un.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+client = MongoClient(os.getenv("MONGODB_URI"))
 db = client["bicycle"]  # 데이터베이스 선택
 collection = db["info"]  # 컬렉션 선택
 
